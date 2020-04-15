@@ -7,13 +7,16 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
 public class Adaptador extends BaseAdapter {
   private Context context;
   private ArrayList<Entidad> listItems;
-
+  private String urlCosa;
 
     public Adaptador(Context context, ArrayList<Entidad> listItems) {
         this.context = context;
@@ -41,6 +44,15 @@ public class Adaptador extends BaseAdapter {
 
        convertView= LayoutInflater.from(context).inflate(R.layout.item,null);
         ImageView imgFoto = (ImageView) convertView.findViewById(R.id.imgFoto);
+        try {
+            String EDteamImage = "https://i.ibb.co/t8shm8K/1-Mazda-MX-5-III.jpg";
+            Glide.with(context)
+                    .load(EDteamImage)
+                    .into(imgFoto);
+        }
+        catch(NullPointerException e){
+            Toast.makeText(context,"NULL POINT",Toast.LENGTH_LONG).show();
+        }
         TextView Titulo = (TextView) convertView.findViewById(R.id.Titulo);
         TextView Contenido = (TextView) convertView.findViewById(R.id.Contenido);
 
