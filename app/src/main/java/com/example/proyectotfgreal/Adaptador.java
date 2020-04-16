@@ -45,7 +45,7 @@ public class Adaptador extends BaseAdapter {
        convertView= LayoutInflater.from(context).inflate(R.layout.item,null);
         ImageView imgFoto = (ImageView) convertView.findViewById(R.id.imgFoto);
         try {
-            String EDteamImage = "https://i.ibb.co/t8shm8K/1-Mazda-MX-5-III.jpg";
+            String EDteamImage = Item.getUrlImagen();
             Glide.with(context)
                     .load(EDteamImage)
                     .into(imgFoto);
@@ -54,11 +54,11 @@ public class Adaptador extends BaseAdapter {
             Toast.makeText(context,"NULL POINT",Toast.LENGTH_LONG).show();
         }
         TextView Titulo = (TextView) convertView.findViewById(R.id.Titulo);
-        TextView Contenido = (TextView) convertView.findViewById(R.id.Contenido);
+        //TextView Contenido = (TextView) convertView.findViewById(R.id.Contenido);
 
         imgFoto.setImageResource(Item.getImgFoto());
         Titulo.setText(Item.getTitulo());
-        Contenido.setText((Item.getTitulo()));
+        //Contenido.setText((Item.getTitulo()));
         return convertView;
     }
 }
