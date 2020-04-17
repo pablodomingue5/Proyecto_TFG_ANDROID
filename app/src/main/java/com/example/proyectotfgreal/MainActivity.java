@@ -2,8 +2,11 @@ package com.example.proyectotfgreal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -19,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Tipos de Coches");
         setContentView(R.layout.activity_main);
         imgView1 = (ImageView)findViewById(R.id.imgFoto);
 
@@ -26,17 +30,57 @@ public class MainActivity extends AppCompatActivity {
 
         adaptador = new Adaptador(this,GetArrayItems());
         lvItems.setAdapter(adaptador);
+        lvItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch(position){
+                    case 0:
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        Intent intentLujo = new Intent(MainActivity.this, ActivityLujo.class);
+                       startActivity(intentLujo);
+                        break;
+                    case 4:
+                        Intent intentDeportivo = new Intent(MainActivity.this, ActivityDeportivo.class);
+                        startActivity(intentDeportivo);
+                        break;
+                    case 5:
+                        Intent intentTodoterreno = new Intent(MainActivity.this, ActivityTodoterreno.class);
+                        startActivity(intentTodoterreno);
+                        break;
 
+                }
+            }
+        });
     }
 
     private ArrayList<Entidad> GetArrayItems() {
         ArrayList<Entidad> listItems = new ArrayList<>();
+        listItems.add(new Entidad(R.drawable.ic_launcher_background,"MINICOMPACTO","https://i.ibb.co/y5SGLJs/21-Fiat-Abarth-595-Competizione.jpg"));
+        listItems.add(new Entidad(R.drawable.ic_launcher_background,"SUBCOMPACTO","https://i.ibb.co/Xz7v37R/19-Renault-Clio-IV.jpg"));
+        listItems.add(new Entidad(R.drawable.ic_launcher_background,"FAMILIAR","https://i.ibb.co/16X6ygg/31-Renault-Scenic-IV.jpg"));
+        listItems.add(new Entidad(R.drawable.ic_launcher_background,"VEHICULOS DE LUJO","https://i.ibb.co/qrWYNFh/6-Mercedes-Clase-E-Coupe.jpg"));
+        listItems.add(new Entidad(R.drawable.ic_launcher_background,"DEPORTIVOS","https://i.ibb.co/qx9dhkz/3-Mazda-RX7-III.jpg"));
+        listItems.add(new Entidad(R.drawable.ic_launcher_background,"TODOTERRENOS","https://i.ibb.co/mvXcKjr/32-Honda-CRV-IIIfacelift2010.jpg"));
+        /*
+        Cambiar titulo a Todoterrenos
+            listItems.add(new Entidad(R.drawable.ic_launcher_background,"SUV",""));
+            listItems.add(new Entidad(R.drawable.ic_launcher_background,"Vehiculo Deportivo Utilitrario",""));
 
-        listItems.add(new Entidad(R.drawable.ic_launcher_background,"COUPE","CUPE","https://i.ibb.co/9Vsk3sX/13-Subaru-WRXSTI-IIIHatchback.jpg"));
-        listItems.add(new Entidad(R.drawable.ic_launcher_background,"OTRA CATEGORIA","CUPE","https://i.ibb.co/qx9dhkz/3-Mazda-RX7-III.jpg"));
-      /*  listItems.add(new Entidad(R.drawable.ic_launcher_background,"BMW M4","SEDAN"));
-        listItems.add(new Entidad(R.drawable.ic_launcher_background,"BMW M4","SEDAN"));
-        listItems.add(new Entidad(R.drawable.ic_launcher_background,"BMW M4","SEDAN"));*/
+         */
+        /*
+        Esto se manejará como segundo apartado
+        listItems.add(new Entidad(R.drawable.ic_launcher_background,"Rally",""));
+        listItems.add(new Entidad(R.drawable.ic_launcher_background,"Circuitos",""));
+        listItems.add(new Entidad(R.drawable.ic_launcher_background,"Autocross",""));
+        listItems.add(new Entidad(R.drawable.ic_launcher_background,"Rallycross",""));
+        listItems.add(new Entidad(R.drawable.ic_launcher_background,"Drifting","https://i.ibb.co/qx9dhkz/3-Mazda-RX7-III.jpg"));
+        listItems.add(new Entidad(R.drawable.ic_launcher_background,"Hill climbing",""));
+         */
         return listItems;
     }
 }
