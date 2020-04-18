@@ -16,14 +16,11 @@ public class ActivityLujo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle("Coches de Lujo");
-        setContentView(R.layout.activity_deportivo);
+        setContentView(R.layout.activity_lujo);
         imgView1 = (ImageView)findViewById(R.id.imgFoto);
-
         lvItems=(ListView) findViewById(R.id.LvItems);
-
         adaptador = new Adaptador(this,GetArrayItems());
         lvItems.setAdapter(adaptador);
-        setContentView(R.layout.activity_lujo);
     }
     private ArrayList<Entidad> GetArrayItems() {
         ArrayList<Entidad> listItems = new ArrayList<>();

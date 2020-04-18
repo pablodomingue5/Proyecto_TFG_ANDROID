@@ -3,15 +3,11 @@ package com.example.proyectotfgreal;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
-
-import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -49,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intentDeportivo);
                         break;
                     case 5:
-                        Intent intentTodoterreno = new Intent(MainActivity.this, ActivityTodoterreno.class);
+                        Intent intentTodoterreno = new Intent(MainActivity.this, ActivityTodocaminos.class);
                         startActivity(intentTodoterreno);
                         break;
 
@@ -65,13 +61,8 @@ public class MainActivity extends AppCompatActivity {
         listItems.add(new Entidad(R.drawable.ic_launcher_background,"FAMILIAR","https://i.ibb.co/16X6ygg/31-Renault-Scenic-IV.jpg"));
         listItems.add(new Entidad(R.drawable.ic_launcher_background,"VEHICULOS DE LUJO","https://i.ibb.co/qrWYNFh/6-Mercedes-Clase-E-Coupe.jpg"));
         listItems.add(new Entidad(R.drawable.ic_launcher_background,"DEPORTIVOS","https://i.ibb.co/qx9dhkz/3-Mazda-RX7-III.jpg"));
-        listItems.add(new Entidad(R.drawable.ic_launcher_background,"TODOTERRENOS","https://i.ibb.co/mvXcKjr/32-Honda-CRV-IIIfacelift2010.jpg"));
-        /*
-        Cambiar titulo a Todoterrenos
-            listItems.add(new Entidad(R.drawable.ic_launcher_background,"SUV",""));
-            listItems.add(new Entidad(R.drawable.ic_launcher_background,"Vehiculo Deportivo Utilitrario",""));
+        listItems.add(new Entidad(R.drawable.ic_launcher_background,"TODOCAMINOS","https://i.ibb.co/mvXcKjr/32-Honda-CRV-IIIfacelift2010.jpg"));
 
-         */
         /*
         Esto se manejará como segundo apartado
         listItems.add(new Entidad(R.drawable.ic_launcher_background,"Rally",""));

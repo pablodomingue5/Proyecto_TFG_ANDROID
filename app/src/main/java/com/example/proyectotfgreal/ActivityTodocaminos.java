@@ -8,28 +8,24 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class ActivityTodoterreno extends AppCompatActivity {
+public class ActivityTodocaminos extends AppCompatActivity {
     private ListView lvItems;
     private Adaptador adaptador;
     public ImageView imgView1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTitle("Todoterrenos");
-        setContentView(R.layout.activity_activty_todoterreno);
-        setContentView(R.layout.activity_deportivo);
+        setContentView(R.layout.activity_todocaminos);
+        setTitle("Todocaminos");
         imgView1 = (ImageView)findViewById(R.id.imgFoto);
-
         lvItems=(ListView) findViewById(R.id.LvItems);
-
         adaptador = new Adaptador(this,GetArrayItems());
         lvItems.setAdapter(adaptador);
-        setContentView(R.layout.activity_lujo);
     }
     private ArrayList<Entidad> GetArrayItems() {
         ArrayList<Entidad> listItems = new ArrayList<>();
-        listItems.add(new Entidad(R.drawable.ic_launcher_background,"SUV",""));
-        listItems.add(new Entidad(R.drawable.ic_launcher_background,"Vehiculo Deportivo Utilitrario",""));
+        listItems.add(new Entidad(R.drawable.ic_launcher_background,"SUV","https://i.ibb.co/mvXcKjr/32-Honda-CRV-IIIfacelift2010.jpg"));
+        listItems.add(new Entidad(R.drawable.ic_launcher_background,"Todoterreno","https://i.ibb.co/51J3LDz/33-Toyota-Land-Cruiser-Prado.jpg"));
         return listItems;
     }
 }
