@@ -24,10 +24,10 @@ public class ActivityLujo extends AppCompatActivity {
     }
     private ArrayList<Entidad> GetArrayItems() {
         ArrayList<Entidad> listItems = new ArrayList<>();
-        listItems.add(new Entidad(R.drawable.ic_launcher_background,"Compacto Premium",""));
-        listItems.add(new Entidad(R.drawable.ic_launcher_background,"Ejecutivos",""));
+        listItems.add(new Entidad(R.drawable.ic_launcher_background,"Compacto Premium","https://i.ibb.co/qWszXxs/34-Audi-A3-8-V.png"));
+        listItems.add(new Entidad(R.drawable.ic_launcher_background,"Ejecutivos","https://i.ibb.co/drLCckD/35-BMW-Serie-7-G11.jpg"));
         listItems.add(new Entidad(R.drawable.ic_launcher_background,"Berlina de Lujo","https://i.ibb.co/LnJ4qGT/5-BMW-Serie5-F10-MLCI.jpg"));
-        listItems.add(new Entidad(R.drawable.ic_launcher_background,"Ranchera",""));
+        listItems.add(new Entidad(R.drawable.ic_launcher_background,"Ranchera","https://i.ibb.co/f0KH9s9/36-Mercedes-Benz-CLS-Shooting-Brake.jpg"));
         return listItems;
     }
 }
