@@ -1,4 +1,4 @@
-package com.example.proyectotfgreal;
+package com.example.proyectotfgreal.Apartado.Adaptador;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,6 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.proyectotfgreal.Apartado.Entidad;
+import com.example.proyectotfgreal.R;
 
 import java.util.ArrayList;
 

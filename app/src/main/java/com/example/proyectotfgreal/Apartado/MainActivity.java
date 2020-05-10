@@ -1,4 +1,4 @@
-package com.example.proyectotfgreal;
+package com.example.proyectotfgreal.Apartado;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,12 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+
+import com.example.proyectotfgreal.Apartado.Activity.ActivityDeportivo;
+import com.example.proyectotfgreal.Apartado.Activity.ActivityLujo;
+import com.example.proyectotfgreal.Apartado.Activity.ActivityTodocaminos;
+import com.example.proyectotfgreal.Apartado.Adaptador.Adaptador;
+import com.example.proyectotfgreal.R;
 
 import java.util.ArrayList;
 

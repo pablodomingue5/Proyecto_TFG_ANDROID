@@ -1,4 +1,4 @@
-package com.example.proyectotfgreal;
+package com.example.proyectotfgreal.Apartado;
 
 public class Entidad {
     private int imgFoto;

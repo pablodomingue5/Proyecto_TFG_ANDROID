@@ -1,10 +1,14 @@
-package com.example.proyectotfgreal;
+package com.example.proyectotfgreal.Apartado.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.ListView;
+
+import com.example.proyectotfgreal.Apartado.Adaptador.Adaptador;
+import com.example.proyectotfgreal.Apartado.Entidad;
+import com.example.proyectotfgreal.R;
 
 import java.util.ArrayList;
 
